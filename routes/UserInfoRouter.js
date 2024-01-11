@@ -42,6 +42,7 @@ router.post("/login",async(req,res)=>{
            
          }
          else{
+          res.set('Access-Control-Allow-Origin', '*');
           res.status(404).json({status:false,message:"Wrong Password"})
          }
 
